@@ -1,0 +1,432 @@
+ @import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Delicious+Handrawn&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Delicious+Handrawn&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+
+    font-family: 'Alkatra', cursive, 'Delicious Handrawn', cursive,Georgia, 'Times New Roman', Times, serif;
+}
+
+
+
+:root {
+    --main-color: #008080;
+    --second-color: #00AEAE;
+    --text-color: white;
+    --gradient: linear-gradient(#008080, #00AEAE);
+}
+
+/*html ::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 5rem;
+}*/
+
+section {
+    padding: 50px 100px;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    right: 0px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    background: teal;
+    padding: 0;
+    padding-left: 3%;
+}
+
+.logo img {
+    width: 50px;
+    margin: 3% auto;
+    margin-top: 15%;
+}
+
+.titleTxt {
+    color: aliceblue;
+    font-family: Delicious Handrawn;
+    font-size: 30px;
+    margin-left: 2%;
+    margin-right: 15%;
+}
+
+.navbar {
+    list-style-type: none;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar li a {
+    color: var(--text-color);
+    padding-right: 50px;
+    font-weight: 500;
+    position: relative;
+}
+
+.navbar li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--text-color);
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.5s;
+}
+
+.navbar li a:hover::after {
+    width: 50%;
+}
+
+.header-btn {
+    margin-left: 10%;
+}
+
+.header-btn a {
+    padding: 0 20px;
+    border: 3px solid #fff;
+    background-color: var(--main-color);
+    margin: 0 3px;
+    font-weight: 500;
+    color: aliceblue;
+    border-radius: 0.5rem;
+}
+
+.header-btn .Sign-In {
+    background: var(--main-color);
+    color: aliceblue;
+}
+
+.header-btn .Sign-In:hover {
+    background: var(--text-color);
+    color: var(--main-color);
+
+}
+
+.header-btn .Sign-Up {
+    background: var(--text-color);
+    color: var(--main-color);
+}
+
+.header-btn .Sign-Up:hover {
+    background: var(--main-color);
+    color: var(--text-color);
+
+}
+
+.home {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.leftHome {
+    flex: 30%;
+    width: 100%;
+    border: #008080;
+    border-radius: 0.5rem;
+}
+
+.rightHome {
+    flex: 70%;
+    width: 100%;
+    font-size: 25px;
+    padding-left: 4%;
+    padding-right: 1%;
+    border: #008080;
+    border-radius: 0.5rem;
+    color: #008080;
+}
+
+.rightHome img {
+    display: block;
+    width: 100%;
+}
+
+.text h1 {
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+}
+
+.text span {
+    color: var(--main-color);
+}
+
+.text p {
+    margin: 0.5rem 0 1rem;
+}
+
+
+
+.form-container{
+    position: relative;
+    top: 100px;
+}
+
+.form-container form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4rem;
+    padding-top: 3%;
+    position: absolute;
+    bottom: 4rem;
+    left: 100px;
+    background: var(--main-color);
+    color: var(--text-color);
+    padding: 2%;
+    border-radius: 1rem;
+}
+
+.form-container form .btn {
+    flex: 1 1 7rem;
+    padding: 2px 34px;
+    outline: auto;
+    border: none;
+    border-radius: 0.5rem;
+    background:var(--main-color);
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+
+.input-box {
+    flex: 5 5 7rem;
+    display: flex;
+    flex-direction: column;
+    background: var(--main-color);
+    color: var(--text-color);
+
+}
+::-webkit-input-placeholder{
+    color: var(--main-color);
+}
+
+.input-box span {
+    font-weight: 500;
+    color: var(--text-color);
+    background: var(--main-color);
+}
+
+.input-box:hover{
+    background: var(--text-color);
+    color:var(--main-color);
+}
+
+.form-container form .btn:hover{
+    background: var(--text-color);
+    color:var(--main-color);
+}
+
+.heading {
+    text-align: center;
+    color: #008080;
+}
+
+.heading span {
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.heading h1 {
+    font-size: 2rem;
+}
+
+.ride-container {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.ride-container .box {
+
+    text-align: center;
+    padding: 20px;
+}
+
+.ride-container .box .bx {
+    font-size: 34px;
+    padding: 10px;
+    background: aliceblue;
+    border-radius: 0.5rem;
+    color: var(--main-color);
+
+}
+
+.ride-container .box h2 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 1.4rem 0 0.5rem;
+}
+
+.ride-container .box .bx:hover,
+.ride-container .bx .bxs-calendar-star {
+    background: var(--gradient);
+    color: #fff;
+}
+
+
+.choose{
+    margin: -80px auto 15px;
+}
+
+/* Sign In and Sign Up */
+
+.container {
+    margin: 5%;
+    width: 80%;
+    margin: auto;
+}
+
+.txtTitle {
+    margin-top: 5%;
+    font-size: 40px;
+    font-family:  'Alkatra';
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40px;
+    border-bottom: 3px solid teal;
+    width: 85%;
+    margin: 15px auto;
+    color: var(--main-color);
+}
+
+
+.form_group{
+    width: 70%;
+    margin: auto;
+}
+
+  .form_group input{
+    font-size: 25px;
+    padding: 10px 30px;
+    width: 100%;
+    margin: 10px auto;
+    border-width: 2px;
+    border-radius: 0.5rem;
+    border-color: var(--main-color);
+    color: var(--main-color);
+    background: var(--text-color);
+  }
+
+  .btn {
+    background-color: white;
+    padding: 10px 50px;
+    font-size: 20px;
+    display: block;
+    margin: auto;
+    border-radius:0.5rem;
+    border-color: var(--main-color);
+    color: #fffff7;
+    background-color:var(--second-color);
+    font-family: 'Rajdhani';
+    font-weight: bold;
+  }
+
+  .btn:hover{
+    background: var(--main-color);
+    color:var(--text-color);
+}
+
+
+
+/* footer*/
+
+
+.footer-main {
+    width: 100%;
+    padding: 60px 0 70px;
+    background-color: teal;
+    margin: 0 auto;
+    margin-top: auto;
+
+}
+.footer-link .fab{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+   border-radius: 50%;
+   padding: 1%;
+   color: var(--text-color);
+   background: var(--main-color);
+   cursor: pointer;
+}
+
+.footer-copyright{
+    display: flex;
+    justify-content: center;
+    color:var(--text-color);
+    padding: 20px;
+    margin-left: 20%;
+    margin-top: 4%;
+    border-top: 3px solid white;
+    width: 90%;
+    margin: 15px auto;
+    font-family: sans-serif;
+}
+
+.footer-main-flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.footer-sitemap {
+    flex-basis: 100%;
+    display: flex;
+}
+
+.footer-sitemap ul:nth-child(1),
+.footer-sitemap ul:nth-child(2) {
+    flex-basis: 180px;
+    margin-left: 13%;
+}
+
+.footer-sitemap ul:nth-child(3) {
+    flex-basis: 340px;
+    margin-left: 13%;
+    color: aliceblue;
+}
+
+.footer-sitemap ul:nth-child(4) {
+    flex-grow: 1;
+
+}
+
+.footer-sitemap p {
+    text-align: right;
+}
+
+.footer-sitemap ul:nth-child(4) li {
+    clear: both;
+    float: right;
+}
+
+.footer-sitemap a {
+    color: aliceblue;
+}
